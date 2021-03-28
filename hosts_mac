@@ -43,9 +43,9 @@
 #db-[99:101]-node.example.com
 
 [aws]
-aws1 ansible_host=3.64.127.6        ansible_user=rt     ansible_ssh_private_key_file=/Users/romantihonov/rt/main_rt
-aws2 ansible_host=35.159.51.96      ansible_user=rt     ansible_ssh_private_key_file=/Users/romantihonov/rt/main_rt
-aws3 ansible_host=18.198.27.116     ansible_user=rt     ansible_ssh_private_key_file=/Users/romantihonov/rt/main_rt
+aws1 ansible_host=3.64.127.6        
+aws2 ansible_host=35.159.51.96      
+aws3 ansible_host=18.198.27.116   
 
 [gcp]
 gcp1 ansible_host=35.239.99.188    ansible_user=rt  ansible_ssh_private_key_file=/Users/romantihonov/rt/main_rt

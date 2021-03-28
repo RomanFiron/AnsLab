@@ -1,0 +1,23 @@
+---
+- name: Install Apache and upload my page
+  hosts: aws
+  become: yes
+
+  vars: 
+  - source_file: /Users/romantihonov/Documents/AnsLab/MyWebSite/index.html 
+    destitation: /var/www/html
+   
+  tasks: 
+  - name: Install Apache Web Server 
+    apt:  name=apache2 state=latest
+
+  - name: Copy my homepage to servers 
+    copy: src={{ source_file }} dest={{ destitation }} mode=0555
+    notify: restart apache
+    
+  - name: Start and Enable 
+    service: name=apache2 state=started enabled=yes
+ 
+  handlers: 
+  - name: restart apache
+    service: name=apache2 state=restarted  
